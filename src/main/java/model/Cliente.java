@@ -8,6 +8,7 @@ public class Cliente {
 
     @Id
     private String cedula;
+    private String nombre;
     private double consumo;
     private double deuda;
 
@@ -16,6 +17,12 @@ public class Cliente {
     }
     public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     public double getConsumo() {
         return consumo;
@@ -30,5 +37,4 @@ public class Cliente {
         this.deuda = deuda;
     }
 
- 
 }
