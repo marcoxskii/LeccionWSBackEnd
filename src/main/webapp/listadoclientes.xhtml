@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Listado de Clientes</title>
+</h:head>
+<body>
+    <h:form id="formListadoClientes">
+        <h:messages globalOnly="true" />
+        <h1>Listado de Clientes:</h1>
+        <h:dataTable value="#{clientes.listado}" var="cliente" border="1">
+            <h:column>
+                <f:facet name="header">Cédula</f:facet>
+                #{cliente.cedula}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                #{cliente.nombre}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Dirección</f:facet>
+                #{cliente.direccion}
+            </h:column>
+        </h:dataTable>
+        <h:commandButton value="Regresar" action="contactos" />
+    </h:form>
+</body>
+</html>

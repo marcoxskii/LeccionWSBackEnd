@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Agregar Cliente</title>
+</h:head>
+<body>
+    <h:form id="formAgregarCliente">
+        <h:messages globalOnly="true" />
+        <h:panelGroup id="cedulaGroup">
+            <h:outputLabel for="cedula" value="Cédula: " />
+            <h:inputText id="cedula" value="#{clientes.persona.cedula}" required="true">
+                <f:validateLength minimum="10" maximum="10" />
+            </h:inputText>
+            <h:message for="cedula" />
+        </h:panelGroup>
+        <h:panelGroup id="nombreGroup">
+            <h:outputLabel for="nombre" value="Nombre: " />
+            <h:inputText id="nombre" value="#{clientes.persona.nombre}" required="true"/>
+            <h:message for="nombre" />
+        </h:panelGroup>
+        <h:panelGroup id="direccionGroup">
+            <h:outputLabel for="direccion" value="Dirección: " />
+            <h:inputText id="direccion" value="#{clientes.persona.direccion}" required="true"/>
+            <h:message for="direccion" />
+        </h:panelGroup>
+        <h:commandButton id="guardarButton" action="#{clientes.guardar()}" value="Guardar"/>
+        <h:commandButton value="Ver Listado" action="listadoclientes" immediate="true" />
+    </h:form>
+</body>
+</html>

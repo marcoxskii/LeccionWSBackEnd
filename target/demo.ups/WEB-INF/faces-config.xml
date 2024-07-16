@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- This file is not required if you don't need any extra configuration. -->
+<faces-config version="4.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+        https://jakarta.ee/xml/ns/jakartaee
+        https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd">
+        
+
+   <navigation-rule>
+       <from-view-id>/contactos.xhtml</from-view-id>
+       <navigation-case>
+           <from-outcome>listadoclientes</from-outcome>
+           <to-view-id>/listadoclientes.xhtml</to-view-id>
+       </navigation-case>
+   </navigation-rule>
+   
+   <navigation-rule>
+       <from-view-id>/listadoclientes.xhtml</from-view-id>
+       <navigation-case>
+           <from-outcome>contactos</from-outcome>
+           <to-view-id>/contactos.xhtml</to-view-id>
+       </navigation-case>
+   </navigation-rule>
+   <!-- This descriptor activates the JSF Servlet -->
+
+   <!-- Write your navigation rules here. You are encouraged to use CDI for
+      creating @Named managed beans. -->
+
+</faces-config>
