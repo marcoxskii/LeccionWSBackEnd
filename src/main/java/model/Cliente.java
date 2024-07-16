@@ -8,8 +8,8 @@ public class Cliente {
 
     @Id
     private String cedula;
-    private String nombre;
-    private String direccion;
+    private double consumo;
+    private double deuda;
 
     public String getCedula() {
         return cedula;
@@ -17,18 +17,18 @@ public class Cliente {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
-    public String getNombre() {
-        return nombre;
+    public double getConsumo() {
+        return consumo;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setConsumo(double consumo) {
+        this.consumo = consumo;
     }
-    public String getDireccion() {
-        return direccion;
+    public double getDeuda() {
+        return deuda;
     }
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDeuda(double deuda) {
+        this.deuda = deuda;
     }
 
-    
+ 
 }

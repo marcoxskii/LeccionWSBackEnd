@@ -19,7 +19,7 @@ public class ClienteDAO {
     }
 
     public void update(Cliente cliente) {
-            em.merge(cliente);
+        em.merge(cliente);
     }
 
     public void delete(String cedula) {
@@ -40,8 +40,5 @@ public class ClienteDAO {
         return query.getResultList();
     }
 
-    
-
-    
 
 }
